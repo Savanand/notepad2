@@ -9,7 +9,7 @@
 <body>
 	<div id="example"></div>
 	<script type="text/babel">
-	
+	{/*
 	var Bacon= React.createClass({
 
 		render: function(){
@@ -28,6 +28,30 @@
 		<Bacon></Bacon>
 		<Bacon></Bacon>
 	</div>, 
+	document.getElementById('example')
+	);
+
+	*/}
+
+	var Movie= React.createClass({
+
+		render: function(){
+			return(
+			<div>
+				<h3>{this.props.title}</h3>
+				<p>{this.props.genre}</p>
+			</div>	
+			);
+
+		}
+	});
+
+	ReactDOM.render(
+	<div>
+		<Movie title="Captain America" genre="Action"></Movie>
+		<Movie title="Saw" genre="Horror"></Movie>
+		<Movie title="Ride Along" genre="Comedy"></Movie>
+	</div>,
 	document.getElementById('example')
 	);
 
