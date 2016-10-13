@@ -13,11 +13,23 @@
 	var Bacon= React.createClass({
 
 		render: function(){
-			return (<h3>This is simple component written as a class</h3>);
+			return (
+			<div>
+				<h3>This is simple component</h3>
+				<p>This is more information on above component</p>
+			</div>
+			);
 		}
 
 	});
-	ReactDOM.render(<h2>Bacon</h2>, document.getElementById('example'));
+	ReactDOM.render(
+	<div>
+		<Bacon></Bacon>
+		<Bacon></Bacon>
+		<Bacon></Bacon>
+	</div>, 
+	document.getElementById('example')
+	);
 
 	</script>
 </body>
