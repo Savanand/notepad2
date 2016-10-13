@@ -9,7 +9,14 @@
 <body>
 	<div id="example"></div>
 	<script type="text/babel">
-		
+	
+	var Bacon= React.createClass({
+
+		render: function(){
+			return (<h3>This is simple component written as a class</h3>);
+		}
+
+	});
 	ReactDOM.render(<h2>Bacon</h2>, document.getElementById('example'));
 
 	</script>
