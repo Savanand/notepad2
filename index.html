@@ -5,11 +5,17 @@
 	<script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
 	<script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
+	<h1>Notepad</h1>
 	<div id="example"></div>
 	<script type="text/babel">
-	{/*
+	
+	{/* added a simple component*/}
+
+	{/*   
+	
 	var Bacon= React.createClass({
 
 		render: function(){
@@ -33,6 +39,11 @@
 
 	*/}
 
+	{/* added properties to the component*/}
+	
+
+	{/*  
+
 	var Movie= React.createClass({
 
 		render: function(){
@@ -54,6 +65,46 @@
 	</div>,
 	document.getElementById('example')
 	);
+
+	*/}
+
+	{/* Added events to button for the notepad application*/}
+
+	var Comment= React.createClass({
+
+		edit : function(){
+			alert('Editing comment');
+		},
+
+		remove : function(){
+			alert('Removing comment');
+		},
+
+		render: function(){
+
+			return(
+				<div>
+					
+					<h3>{this.props.children}</h3>&nbsp;
+					<button onClick={this.edit} className="btn btn-primary">Edit</button> &nbsp;&nbsp;
+					<button onClick={this.remove} className="btn btn-danger">Remove</button>&nbsp;&nbsp;	
+				
+				</div>
+			);
+		}
+	});
+
+	ReactDOM.render(
+		<div>
+			<Comment>Conference at 11</Comment>
+			<Comment>School Gathering</Comment>
+			<Comment>Meeting parents in the evening</Comment>
+		</div>
+		,
+		document.getElementById('example')
+	);
+
+
 
 	</script>
 </body>
